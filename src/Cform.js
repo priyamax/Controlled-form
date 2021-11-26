@@ -24,7 +24,7 @@ class Cform extends Component{
         e.preventDefault();
        
         var errKeys = await Object.keys(this.state).filter((key) => {
-          if (this.state[key] == '' && this.state[key] != this.state.errors[key]) {
+          if (this.state[key] == '' && key != 'errors') {
             return key;
           }
         });
